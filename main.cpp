@@ -8,26 +8,27 @@ using namespace std;
 int health = 100;
 int drunklevel=0;
 int happiness=50;
-int racisimlevel=0;
+int racismlevel=0;
 int tindermatches=0;
 int money=50;
 int condomCount=2;
 int confidence =0;
 int level=0;
 
+void barMenu();
 void checkDay(int);
 string name;
 string day;
 
 void MainMenu();
 
-void mondayNight();
-void tuesdayNight();
-void wednesdayNight();
-void thursdayNight();
-void fridayNight();
-void saturdayNight();
-void sundayNight();
+//void mondayNight();
+//void tuesdayNight();
+//void wednesdayNight();
+void thursdayNight(string);
+//void fridayNight();
+//void saturdayNight();
+void sundayNight(string);
 
 
 int main()
@@ -49,47 +50,48 @@ int main()
 
 void checkDay(int i)
 {
+	i = 5;
     if (i == 1)
     {
         cout << "It is a Sunday Night" << endl;
         day = "Sunday";
-        sundayNight();
+        sundayNight(day);
     }
     else if (i == 2)
     {
         cout << "It is a Monday Night" << endl;
         day = "Monday";
-        mondayNight();
+        //mondayNight();
     }
     else if (i == 3)
     {
         cout << "It is a Tuesday Night" << endl;
         day = "Tuesday";
-        tuesdayNight();
+        //tuesdayNight();
     }
     else if (i == 4)
     {
         cout << "It is a Wednesday Night" << endl;
         day = "Wednesday";
-        wednesdayNight();
+       // wednesdayNight();
     }
     else if (i == 5)
     {
         cout << "It is a Thursday Night" << endl;
         day = "Thursday";
-        thursdayNight();
+        thursdayNight(day);
     }
     else if (i == 6)
     {
         cout << "It is a Friday Night" << endl;
         day = "Friday";
-        fridayNight();
+        //fridayNight();
     }
     else if (i == 7)
     {
         cout << "It is a Saturday Night" << endl;
         day = "Saturday";
-        saturdayNight();
+        //saturdayNight();
     }
     cout << endl;
 }
@@ -141,5 +143,62 @@ void sundayNight(string day)
 
     }
 }
+
+void preDrink()
+{
+     cout << "You decide to predrink at your friends house, what genre of music do you want to listen to? ( choose a number)" << endl;
+    cout << "1) Country       2) EDM           3)Rap           4) Rock" << endl;
+	int answer;
+	cin >> answer;
+	if (answer == 1)
+	{
+
+		cout << "Because you listened to Country music, your drunk level drastically increased, your racism level increased, and your health dropped"<< endl;
+	}
+	else if (answer == 2)
+	{
+		cout << "Because you listened to EDM music, your drunk level drastically increased, your racism level increased, and your health dropped"<< endl;
+	}
+	else if (answer == 3)
+	{
+		cout << "Because you listened to Rap music, your drunk level drastically increased, your racism level increased, and your health dropped"<< endl;
+	}
+	else if (answer == 4)
+	{
+		cout << "Because you listened to Rock music, you are staying home and fapping, game over."<< endl;
+		exit (EXIT_FAILURE);
+	}
+
+	cout << "You are at the pump. you decide to doublefist dollar drafts " << endl;
+	//beer();
+	//beer();
+
+	barMenu();
+
+}
+
+void barMenu()
+{
+	cout << "You choose to do one of the following:" << endl;
+	cout << "1) Get a drink     2) Go to the dance floor      3) Find your friends         4) Karaoke        5) Check your phone       6) Check tinder" << endl;
+
+
+
+
+
+
+}
+void thursdayNight(string day)
+{
+    cout << "It is a " << day << " night, you are going to The Pump!" << endl;
+	cout << "The Pump is a crazy place, you can't go sober - gotta predrink!" << endl;
+	cout << "What are you gonna drink?" << endl;
+	preDrink();
+
+}
+
+
+
+
 
 
