@@ -5,11 +5,30 @@ using namespace std;
 #include <cstdlib>
 #include <ctime>
  
+ 
+ int health = 100;
+ int drunklevel = 0;
+ int happiness = 50;
+ int racisimlevel = 0;
+ int tindermatches= 0;
+ int money = 50;
+ int level = 1;
+ int condomCount = 1;
+ 
         void checkDay(int);
         string name;
         string day;
  
-int main()
+  void mondayNight();
+  void tuesdayNight();
+  void wednesdayNight();
+  void thursdayNight();
+  void fridayNight();
+  void saturdayNight();
+  void sundayNight();
+ 
+ 
+ int main()
 {
         character player;
         cout << "Please enter your name" << endl;
@@ -66,3 +85,5 @@ if (i == 1)
                 day = "Saturday";
         }
 }
+
+void sundayNight
